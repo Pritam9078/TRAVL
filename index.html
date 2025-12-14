@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travl - A Kaleidoscopic Journey Through India</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="app-name" onclick="showLanding()">Travl</h1>
+            <h2 class="main-title">A Kaleidoscopic Journey Through India</h2>
+            <p class="subtitle">Exploring culture, landscapes, and local flavours</p>
+            
+            <!-- Navigation Breadcrumb -->
+            <nav class="breadcrumb" id="breadcrumb">
+                <span class="breadcrumb-item active" onclick="showLanding()">Home</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE 1: Landing Page - States Only -->
+    <section class="page landing-page" id="landing-page">
+        <div class="container">
+            <h3>Choose Your Destination</h3>
+            <div class="states-grid">
+                
+                <div class="state-card" onclick="showStatePage('odisha')">
+                    <h4>Odisha</h4>
+                    <p class="state-tagline">Land of Temples and Traditions</p>
+                </div>
+
+                <div class="state-card" onclick="showStatePage('kerala')">
+                    <h4>Kerala</h4>
+                    <p class="state-tagline">God's Own Country</p>
+                </div>
+
+                <div class="state-card" onclick="showStatePage('shillong')">
+                    <h4>Shillong, Meghalaya</h4>
+                    <p class="state-tagline">Scotland of the East</p>
+                </div>
+
+                <div class="state-card" onclick="showStatePage('goa')">
+                    <h4>Goa</h4>
+                    <p class="state-tagline">Coastal Paradise</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 2: State Page - Places List -->
+    <section class="page state-page" id="state-page">
+        <div class="container">
+            <button class="back-btn" onclick="showLanding()">← Back to States</button>
+            <h3 id="state-title">Popular Places</h3>
+            <div class="places-grid" id="places-list">
+                <!-- Places will be populated by JavaScript -->
+            </div>
+            
+            <!-- Popular Foods Section -->
+            <div class="foods-section">
+                <h3 id="foods-title">Popular Foods</h3>
+                <div class="foods-grid" id="foods-list">
+                    <!-- Foods will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3: Place Detail Page -->
+    <section class="page place-detail-page" id="place-detail-page">
+        <div class="container">
+            <button class="back-btn" id="back-to-state" onclick="goBackToState()">← Back to Places</button>
+            
+            <div class="place-detail-content">
+                <div class="place-image-container">
+                    <img id="place-image" src="" alt="">
+                </div>
+                
+                <div class="place-info">
+                    <h3 id="place-title"></h3>
+                    
+                    <div class="place-section">
+                        <h4>Description</h4>
+                        <p id="place-description"></p>
+                    </div>
+                    
+                    <div class="place-section">
+                        <h4>Culture & History</h4>
+                        <p id="place-culture"></p>
+                    </div>
+                    
+                    <div class="place-section">
+                        <h4>The Local Flavour</h4>
+                        <p id="place-local-flavour"></p>
+                    </div>
+                    
+                    <div class="place-section">
+                        <h4>Why Visit</h4>
+                        <p id="place-why-visit"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>English Project – Travelogue | Academic Year 2025–26 | By Superna Pattanayak</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

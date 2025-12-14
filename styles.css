@@ -1,0 +1,878 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 198, 121, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Page Management */
+.page {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    min-height: auto;
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+}
+
+/* Container for consistent width and centering */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+/* Header Section Styles */
+.header {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), 
+                url('https://a.storyblok.com/f/112937/568x400/686f87dc2f/50-things-you-need-to-do-on-your-next-trip_square-568x400.jpg/m/620x0/filters:quality(70)/') center/cover no-repeat;
+    backdrop-filter: blur(5px);
+    padding: 100px 0 80px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    z-index: 1;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
+    50% { transform: translateX(-50%) translateY(-50%) rotate(180deg); }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.3); }
+    100% { text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 255, 255, 0.6); }
+}
+
+.app-name {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.app-name:hover {
+    transform: scale(1.05);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.breadcrumb-item {
+    color: #7f8c8d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item:not(.active) {
+    cursor: pointer;
+}
+
+.breadcrumb-item:not(.active):hover {
+    color: #3498db;
+}
+
+.breadcrumb-item.active {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.breadcrumb-separator {
+    margin: 0 8px;
+    color: #bdc3c7;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 0;
+}
+
+section h3 {
+    font-size: 2.5rem;
+    color: #1a202c;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+section h3::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* Introduction Section */
+.introduction {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.introduction p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* Landing Page - States Section */
+.landing-page {
+    background: transparent;
+    min-height: auto;
+    padding: 50px 0;
+}
+
+.states-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.state-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #6366f1;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.state-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.03), rgba(168, 85, 247, 0.03));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.state-card:hover::before {
+    opacity: 1;
+}
+
+.state-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(99, 102, 241, 0.15);
+    border-color: #c7d2fe;
+}
+
+.state-tagline {
+    font-size: 0.95rem;
+    color: #6366f1;
+    font-style: italic;
+    margin-top: 10px;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+.state-card h4 {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.state-card .narrative {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    text-align: justify;
+    position: relative;
+    z-index: 2;
+}
+
+.state-card .culture {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-style: italic;
+    text-align: justify;
+}
+
+.state-card .flavour {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    line-height: 1.5;
+    background-color: #ecf0f1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border-left: 3px solid #e74c3c;
+}
+
+.state-card .flavour strong {
+    color: #e74c3c;
+}
+
+/* Back Button */
+.back-btn {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+}
+
+.back-btn:hover {
+    background: #4f46e5;
+    transform: translateX(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* State Page - Places Grid */
+.state-page {
+    background: transparent;
+    min-height: auto;
+    padding: 50px 0;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.place-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.place-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.12);
+    border-color: #c7d2fe;
+}
+
+.place-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.place-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.place-card-image img:hover {
+    transform: scale(1.05);
+}
+
+.place-card h4 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin: 15px 20px 10px 20px;
+    font-weight: 500;
+}
+
+.place-preview {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 20px 20px 20px;
+    line-height: 1.5;
+}
+
+/* Foods Section */
+.foods-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid #e8e8e8;
+}
+
+.foods-section h3 {
+    text-align: center;
+    color: #1a202c;
+    margin-bottom: 40px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.foods-section h3::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.foods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.food-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.12);
+    border-color: #c7d2fe;
+}
+
+.food-card-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.food-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+}
+
+.food-card:hover .food-card-image img {
+    transform: scale(1.08);
+    filter: brightness(1.1) saturate(1.2);
+}
+
+.food-card-content {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.food-card h4 {
+    color: #2d3748;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.food-description {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Place Detail Page */
+.place-detail-page {
+    background-color: #ffffff;
+    min-height: auto;
+    padding: 50px 0;
+}
+
+.place-detail-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+.place-image-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.place-image-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.place-info {
+    padding: 20px 0;
+}
+
+.place-info h3 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.place-section {
+    margin-bottom: 25px;
+}
+
+.place-section h4 {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-weight: 500;
+    border-left: 3px solid #3498db;
+    padding-left: 15px;
+}
+
+.place-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Reflections Section */
+.reflections {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.reflections p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header {
+        padding: 40px 0 30px 0;
+    }
+    
+    .app-name {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .main-title {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    section h3 {
+        font-size: 1.9rem;
+    }
+    
+    .states-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .places-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .state-card {
+        padding: 25px;
+    }
+    
+    .place-detail-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .place-image-container img {
+        height: 300px;
+    }
+    
+    .place-info h3 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .introduction p,
+    .reflections p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    body {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto !important;
+    }
+    
+    .header {
+        padding: 30px 0 25px 0;
+    }
+    
+    .app-name {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .main-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .breadcrumb {
+        font-size: 0.8rem;
+        margin-top: 15px;
+    }
+    
+    section {
+        padding: 30px 0;
+    }
+    
+    section h3 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    
+    .state-card {
+        padding: 20px;
+    }
+    
+    .state-card h4 {
+        font-size: 1.4rem;
+    }
+    
+    .state-tagline {
+        font-size: 0.9rem;
+    }
+    
+    .back-btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .place-card h4 {
+        font-size: 1.2rem;
+        margin: 12px 15px 8px 15px;
+    }
+    
+    .place-preview {
+        font-size: 0.85rem;
+        margin: 0 15px 15px 15px;
+    }
+    
+    .place-card-image {
+        height: 180px;
+    }
+    
+    .place-image-container img {
+        height: 250px;
+    }
+    
+    /* Foods Section Mobile */
+    .foods-section {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+    
+    .foods-section h3 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .foods-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .food-card-image {
+        height: 180px;
+    }
+    
+    .food-card-content {
+        padding: 15px;
+    }
+    
+    .food-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .food-description {
+        font-size: 0.9rem;
+    }
+    
+    .place-info {
+        padding: 15px 0;
+    }
+    
+    .place-info h3 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    .place-section {
+        margin-bottom: 20px;
+    }
+    
+    .place-section h4 {
+        font-size: 1.1rem;
+        padding-left: 12px;
+    }
+    
+    .place-section p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+    
+    .introduction p,
+    .reflections p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+    
+    .footer {
+        padding: 25px 0;
+    }
+    
+    .footer p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra Small Mobile Styles */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .app-name {
+        font-size: 1.8rem;
+    }
+    
+    .main-title {
+        font-size: 1.1rem;
+    }
+    
+    .state-card {
+        padding: 15px;
+    }
+    
+    .state-card .narrative,
+    .introduction p,
+    .reflections p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header {
+        background: none !important;
+        color: #000 !important;
+    }
+    
+    .state-card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+        break-inside: avoid;
+        margin-bottom: 20px !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+    }
+}
+
+/* Add subtle floating to food cards on larger screens */
+@media (min-width: 768px) {
+    .food-card:nth-child(odd) {
+        animation: float 3s ease-in-out infinite;
+        animation-delay: 0.5s;
+    }
+    
+    .food-card:nth-child(even) {
+        animation: float 3s ease-in-out infinite;
+        animation-delay: 1s;
+    }
+}
