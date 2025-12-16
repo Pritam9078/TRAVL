@@ -213,8 +213,8 @@ section h3::after {
     font-weight: 400;
 }
 
-/* Landing Page - States Section */
-.landing-page {
+/* Main Content - Direct States Section */
+.main-content {
     background: transparent;
     min-height: auto;
     padding: 50px 0;
@@ -398,6 +398,114 @@ section h3::after {
     color: #666;
     margin: 0 20px 20px 20px;
     line-height: 1.5;
+}
+
+/* Journey Section */
+.journey-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid #e8e8e8;
+}
+
+.journey-section h3 {
+    text-align: center;
+    color: #1a202c;
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.journey-section h3::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.journey-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    margin-top: 30px;
+}
+
+.journey-content h4 {
+    color: #6366f1;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.journey-content .journey-subtitle {
+    color: #6366f1;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+.journey-content p {
+    color: #4a5568;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.journey-content strong {
+    color: #2d3748;
+    font-weight: 700;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.journey-image {
+    margin: 25px 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.journey-image img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive images for journey section */
+@media (max-width: 768px) {
+    .journey-image {
+        margin: 20px 0;
+        padding: 5px;
+    }
+    
+    .journey-image img {
+        max-width: 70%;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .journey-image img {
+        max-width: 85%;
+    }
 }
 
 /* Foods Section */

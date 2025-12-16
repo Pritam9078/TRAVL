@@ -196,7 +196,85 @@ const placesData = {
                 description: 'Steamed rice cake wrapped in banana leaves for festivals and ceremonies',
                 image: 'https://curtaincalladventures.com/wp-content/uploads/2022/04/pumaloi-steamed-rice-cakes.jpg'
             }
-        ]
+        ],
+        journey: {
+            title: "Wandering Through Shillong",
+            subtitle: "Meghalaya Through My Eyes",
+            images: {
+                airport: "https://i.postimg.cc/vmMrwqnj/Whats-App-Image-2025-12-15-at-20-01-29.jpg",
+                umiamLake: "https://i.postimg.cc/5tnCdxbf/Whats-App-Image-2025-12-15-at-20-01-47.jpg",
+                donBosco: "https://i.postimg.cc/nV6Tw1d8/Whats-App-Image-2025-12-15-at-20-02-34.jpg",
+                policeBazaar: "https://i.postimg.cc/0jgmZV9C/Whats-App-Image-2025-12-15-at-20-03-19.jpg",
+                elephantFalls: "https://i.postimg.cc/90jRyzBn/Whats-App-Image-2025-12-15-at-20-03-32.jpg",
+                personal: "https://i.postimg.cc/zXz3Ns2R/Whats-App-Image-2025-12-15-at-20-03-43.jpg",
+                caves: "https://i.postimg.cc/wM6x6N2L/Whats-App-Image-2025-12-15-at-20-05-39.jpg",
+                nohkalikai: "https://i.postimg.cc/zX2DrVgf/Whats-App-Image-2025-12-15-at-20-06-11.jpg",
+                doubleDecker: "https://i.postimg.cc/tCJy2pmD/Whats-App-Image-2025-12-15-at-20-06-26.jpg",
+                blueLagoon: "https://i.postimg.cc/fyL42f57/Whats-App-Image-2025-12-15-at-20-06-36.jpg",
+                dawki: "https://i.postimg.cc/WbxR8rZr/Whats-App-Image-2025-12-15-at-20-07-23.jpg"
+            },
+            content: `I began this journey with a flight from Bangalore to Guwahati, carrying equal parts excitement and curiosity. As the plane landed, I knew I was stepping into a completely different world. From Guwahati, we had already booked a car, and as we started driving toward Shillong, the roads slowly curled into the hills. The air felt cooler, fresher, and with every turn, Meghalaya began to reveal itself.
+
+[IMG:airport]
+
+**Umiam Lake – Where the Journey Truly Began**
+
+Our first stop was Umiam Lake, and honestly, it felt like the journey truly began there. The lake was unbelievably beautiful—wide, calm, and surrounded by gentle green hills. I remember standing there quietly, watching the clouds reflect on the water, feeling an unexpected sense of peace. It was one of those places where you don't feel the need to talk—you just stand and absorb everything.
+
+[IMG:umiamLake]
+
+**Shillong – A City That Feels Alive**
+
+We reached Shillong and went straight to the Don Bosco Museum. Walking through the museum felt like slowly understanding the soul of the Northeast. Each floor told stories of tribes, traditions, and cultures I knew very little about before. It made me appreciate the region beyond its landscapes.
+
+[IMG:donBosco]
+
+After that, we checked into our hotel to rest for a bit before heading out again. In the evening, we went to Police Bazaar, which felt like the heartbeat of Shillong. The place was lively, colorful, and full of energy. We walked through the streets, bought small tourist souvenirs, and just enjoyed being there among locals and travelers. It felt warm, familiar, and welcoming.
+
+[IMG:policeBazaar]
+
+**Elephant Falls – Nature in Its Raw Form**
+
+Next on our list was Elephant Falls. The moment we got closer, we could hear the water before we saw it. Watching the waterfall rush down with such force was refreshing and calming at the same time. The mist in the air and the greenery around made the whole experience feel raw and natural.
+
+[IMG:elephantFalls]
+
+[IMG:personal]
+
+**Mawsmai Cave – A Step into the Unknown**
+
+Visiting Mawsmai Cave was a completely different experience. Walking inside the dark, narrow cave was both exciting and slightly uncomfortable. Water dripped from above, and the silence felt heavy. But that's what made it special—it reminded me how powerful and ancient nature really is.
+
+[IMG:caves]
+
+**Nohkalikai Falls – Powerful and Emotional**
+
+Nohkalikai Falls left me speechless. Standing at the edge and looking down at the water falling from such a height was overwhelming. The view was dramatic, almost emotional. There was something about the place that made me stand still for a long time, just looking, thinking, and feeling.
+
+[IMG:nohkalikai]
+
+**Krang Suri (Kyrem) Falls – A Place I'll Never Forget**
+
+Among all the places I visited, Krang Suri Falls felt truly magical. The water was unbelievably clear and blue, and the surroundings were so peaceful. I remember wishing I could stay there longer. It felt untouched, pure, and quietly beautiful—one of those places that stays with you even after you leave.
+
+**Double Decker Living Root Bridge & Blue Lagoon – Beautiful but Brutal**
+
+The trek to the Double Decker Living Root Bridge and Blue Lagoon was the most challenging part of the trip. The bridge itself was incredible—nature and human patience working together over generations. The Blue Lagoon was stunning and refreshing, making the effort feel worth it.
+
+[IMG:doubleDecker]
+
+But the climb back was exhausting. The endless steps pushed me to my limits, and even physically fit people struggled. I realized this trek isn't for everyone—especially those with heart problems, BP issues, or joint pain. For me, it was both a rewarding and difficult experience. Beautiful, but brutal.
+
+[IMG:blueLagoon]
+
+**Dawki – A Perfect Ending**
+
+Finally, we reached Dawki, and it felt like the perfect way to end the journey. The water was so clear it didn't feel real. Boats looked like they were floating in the air. Standing there, I felt calm, amazed, and grateful. It was one of those moments where you don't want to leave, just stand and remember how incredible the world can be.
+
+[IMG:dawki]
+
+This journey through Meghalaya wasn't just about visiting places—it was about feeling them. The roads, the silence, the effort, the beauty, and the exhaustion all came together to create memories I know I'll carry with me for a long time.`
+        }
     },
     goa: {
         name: 'Goa',
@@ -266,14 +344,19 @@ const placesData = {
 
 // Navigation Functions
 
-// Show Landing Page (States List)
-function showLanding() {
+// Show Home Page (States List)
+function showHome() {
     hideAllPages();
-    document.getElementById('landing-page').classList.add('active');
+    document.querySelector('.main-content').style.display = 'block';
     updateBreadcrumb(['Home']);
     currentState = '';
     currentPlace = '';
     resetScroll();
+}
+
+// Keep showLanding for compatibility
+function showLanding() {
+    showHome();
 }
 
 // Show State Page (Places List)
@@ -335,6 +418,40 @@ function showStatePage(stateId) {
         });
     }
     
+    // Handle journey section (only for Shillong)
+    const journeySection = document.getElementById('journey-section');
+    if (stateId === 'shillong' && stateData.journey) {
+        journeySection.style.display = 'block';
+        document.getElementById('journey-title').textContent = stateData.journey.title;
+        
+        // Integrate subtitle into the content rather than separate
+        const journeyText = document.getElementById('journey-text');
+        const contentWithSubtitle = `<h4 class="journey-subtitle">${stateData.journey.subtitle}</h4>\n\n${stateData.journey.content}`;
+        
+        // Convert the content to HTML with proper formatting
+        let formattedContent = contentWithSubtitle
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\n\n/g, '</p><p>')
+            .replace(/\n/g, '<br>');
+        
+        // Process image markers if images are available
+        if (stateData.journey.images) {
+            formattedContent = formattedContent.replace(/\[IMG:(\w+)\]/g, (match, imageKey) => {
+                if (stateData.journey.images[imageKey]) {
+                    return `</p><div class="journey-image"><img src="${stateData.journey.images[imageKey]}" alt="Journey memory" loading="lazy"></div><p>`;
+                }
+                return '';
+            });
+        }
+        
+        journeyText.innerHTML = '<p>' + formattedContent + '</p>';
+        
+        // Hide the separate subtitle element since it's now part of content
+        document.getElementById('journey-subtitle').textContent = '';
+    } else {
+        journeySection.style.display = 'none';
+    }
+    
     // Re-apply image loading effects for new images
     addImageLoadingEffect();
     resetScroll();
@@ -386,6 +503,12 @@ function hideAllPages() {
     pages.forEach(page => {
         page.classList.remove('active');
     });
+    
+    // Also hide main content
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        mainContent.style.display = 'none';
+    }
 }
 
 // Update breadcrumb navigation
@@ -498,10 +621,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.style.overflow = 'auto';
     document.documentElement.style.overflow = 'auto';
     
-    showLanding(); // Start with landing page
+    // Show main content directly (no separate landing page)
+    hideAllPages();
+    document.querySelector('.main-content').style.display = 'block';
     
-    // Add history state for landing page
-    history.replaceState({page: 'landing'}, 'Travl - Home', '#home');
+    // Add history state for home page
+    history.replaceState({page: 'home'}, 'Travl - Choose Your Destination', '#destinations');
     
     // Add image loading effects
     setTimeout(addImageLoadingEffect, 100);

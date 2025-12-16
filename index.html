@@ -10,19 +10,19 @@
     <!-- Header Section -->
     <header class="header">
         <div class="container">
-            <h1 class="app-name" onclick="showLanding()">Travl</h1>
+            <h1 class="app-name" onclick="showHome()">Travl</h1>
             <h2 class="main-title">A Kaleidoscopic Journey Through India</h2>
             <p class="subtitle">Exploring culture, landscapes, and local flavours</p>
             
             <!-- Navigation Breadcrumb -->
             <nav class="breadcrumb" id="breadcrumb">
-                <span class="breadcrumb-item active" onclick="showLanding()">Home</span>
+                <span class="breadcrumb-item active" onclick="showHome()">Home</span>
             </nav>
         </div>
     </header>
 
-    <!-- PAGE 1: Landing Page - States Only -->
-    <section class="page landing-page" id="landing-page">
+    <!-- Main Content - Direct States Selection -->
+    <main class="main-content">
         <div class="container">
             <h3>Choose Your Destination</h3>
             <div class="states-grid">
@@ -49,15 +49,24 @@
 
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- PAGE 2: State Page - Places List -->
+    <!-- PAGE 1: State Page - Places List -->
     <section class="page state-page" id="state-page">
         <div class="container">
-            <button class="back-btn" onclick="showLanding()">← Back to States</button>
+            <button class="back-btn" onclick="showHome()">← Back to Home</button>
             <h3 id="state-title">Popular Places</h3>
             <div class="places-grid" id="places-list">
                 <!-- Places will be populated by JavaScript -->
+            </div>
+            
+            <!-- Personal Journey Section (for Shillong only) -->
+            <div class="journey-section" id="journey-section" style="display: none;">
+                <h3 id="journey-title"></h3>
+                <div class="journey-content">
+                    <h4 id="journey-subtitle"></h4>
+                    <div id="journey-text"></div>
+                </div>
             </div>
             
             <!-- Popular Foods Section -->
@@ -70,7 +79,7 @@
         </div>
     </section>
 
-    <!-- PAGE 3: Place Detail Page -->
+    <!-- PAGE 2: Place Detail Page -->
     <section class="page place-detail-page" id="place-detail-page">
         <div class="container">
             <button class="back-btn" id="back-to-state" onclick="goBackToState()">← Back to Places</button>
