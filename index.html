@@ -10,12 +10,12 @@
     <!-- Header Section -->
     <header class="header">
         <div class="container">
-            <h1 class="app-name" onclick="showHome()">Travl</h1>
-            <h2 class="main-title">A Kaleidoscopic Journey Through India</h2>
-            <p class="subtitle">Exploring culture, landscapes, and local flavours</p>
+            <h1 class="app-name fade-up" onclick="showHome()">Travl</h1>
+            <h2 class="main-title fade-up fade-up-delay-1">A Kaleidoscopic Journey Through India</h2>
+            <p class="subtitle fade-up fade-up-delay-2">Exploring culture, landscapes, and local flavours</p>
             
             <!-- Navigation Breadcrumb -->
-            <nav class="breadcrumb" id="breadcrumb">
+            <nav class="breadcrumb fade-up fade-up-delay-3" id="breadcrumb">
                 <span class="breadcrumb-item active" onclick="showHome()">Home</span>
             </nav>
         </div>
@@ -24,25 +24,25 @@
     <!-- Main Content - Direct States Selection -->
     <main class="main-content">
         <div class="container">
-            <h3>Choose Your Destination</h3>
+            <h3 class="fade-up">Choose Your Destination</h3>
             <div class="states-grid">
                 
-                <div class="state-card featured-destination" onclick="showStatePage('shillong')">
+                <div class="state-card featured-destination fade-up" onclick="showStatePage('shillong')">
                     <h4>Shillong, Meghalaya</h4>
                     <p class="state-tagline">Scotland of the East</p>
                 </div>
 
-                <div class="state-card" onclick="showStatePage('odisha')">
+                <div class="state-card fade-up fade-up-delay-1" onclick="showStatePage('odisha')">
                     <h4>Odisha</h4>
                     <p class="state-tagline">Land of Temples and Traditions</p>
                 </div>
 
-                <div class="state-card" onclick="showStatePage('kerala')">
+                <div class="state-card fade-up fade-up-delay-2" onclick="showStatePage('kerala')">
                     <h4>Kerala</h4>
                     <p class="state-tagline">God's Own Country</p>
                 </div>
 
-                <div class="state-card" onclick="showStatePage('goa')">
+                <div class="state-card fade-up fade-up-delay-3" onclick="showStatePage('goa')">
                     <h4>Goa</h4>
                     <p class="state-tagline">Coastal Paradise</p>
                 </div>
@@ -62,54 +62,10 @@
             
             <!-- Personal Journey Section (for Shillong only) -->
             <div class="journey-section" id="journey-section" style="display: none;">
-                <div class="journey-header">
-                    <h3 id="journey-title"></h3>
-                    <button class="notes-btn" id="notes-btn" onclick="toggleNotes()">📝 NOTES</button>
-                </div>
+                <h3 id="journey-title"></h3>
                 <div class="journey-content">
                     <h4 id="journey-subtitle"></h4>
                     <div id="journey-text"></div>
-                </div>
-                
-                <!-- Notes Gallery -->
-                <div class="notes-gallery" id="notes-gallery" style="display: none;">
-                    <h4>📖 My Travel Notes</h4>
-                    <p class="notes-description">Handwritten memories and sketches from my journey through Meghalaya</p>
-                    <div class="notes-grid">
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/cJ3pvYQv/Whats-App-Image-2025-12-18-at-14-17-27.jpg')">
-                            <img src="https://i.postimg.cc/cJ3pvYQv/Whats-App-Image-2025-12-18-at-14-17-27.jpg" alt="Travel Note 1">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/RVqb3KBd/Whats-App-Image-2025-12-18-at-14-17-28-(1).jpg')">
-                            <img src="https://i.postimg.cc/RVqb3KBd/Whats-App-Image-2025-12-18-at-14-17-28-(1).jpg" alt="Travel Note 2">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/T1Bj5yVH/Whats-App-Image-2025-12-18-at-14-17-28-(2).jpg')">
-                            <img src="https://i.postimg.cc/T1Bj5yVH/Whats-App-Image-2025-12-18-at-14-17-28-(2).jpg" alt="Travel Note 3">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/FRR0PbD9/Whats-App-Image-2025-12-18-at-14-17-28.jpg')">
-                            <img src="https://i.postimg.cc/FRR0PbD9/Whats-App-Image-2025-12-18-at-14-17-28.jpg" alt="Travel Note 4">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/GmxMVQJJ/Whats-App-Image-2025-12-18-at-14-17-29-(1).jpg')">
-                            <img src="https://i.postimg.cc/GmxMVQJJ/Whats-App-Image-2025-12-18-at-14-17-29-(1).jpg" alt="Travel Note 5">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/wBtwMpYc/Whats-App-Image-2025-12-18-at-14-17-29-(2).jpg')">
-                            <img src="https://i.postimg.cc/wBtwMpYc/Whats-App-Image-2025-12-18-at-14-17-29-(2).jpg" alt="Travel Note 6">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/SNyV88pJ/Whats-App-Image-2025-12-18-at-14-17-29.jpg')">
-                            <img src="https://i.postimg.cc/SNyV88pJ/Whats-App-Image-2025-12-18-at-14-17-29.jpg" alt="Travel Note 7">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/02YjgM6v/Whats-App-Image-2025-12-18-at-14-17-30-(1).jpg')">
-                            <img src="https://i.postimg.cc/02YjgM6v/Whats-App-Image-2025-12-18-at-14-17-30-(1).jpg" alt="Travel Note 8">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/05m2mM0Y/Whats-App-Image-2025-12-18-at-14-17-30-(2).jpg')">
-                            <img src="https://i.postimg.cc/05m2mM0Y/Whats-App-Image-2025-12-18-at-14-17-30-(2).jpg" alt="Travel Note 9">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/rwpkhK5M/Whats-App-Image-2025-12-18-at-14-17-30-(3).jpg')">
-                            <img src="https://i.postimg.cc/rwpkhK5M/Whats-App-Image-2025-12-18-at-14-17-30-(3).jpg" alt="Travel Note 10">
-                        </div>
-                        <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/YqdcmMZZ/Whats-App-Image-2025-12-18-at-14-17-30.jpg')">
-                            <img src="https://i.postimg.cc/YqdcmMZZ/Whats-App-Image-2025-12-18-at-14-17-30.jpg" alt="Travel Note 11">
-                        </div>
-                    </div>
                 </div>
             </div>
             
@@ -166,14 +122,6 @@
             <p>English Project – Travelogue | Academic Year 2025–26 | By Superna Pattanayak</p>
         </div>
     </footer>
-
-    <!-- Notes Modal -->
-    <div class="note-modal" id="note-modal" onclick="closeNoteModal()">
-        <div class="note-modal-content">
-            <img id="note-modal-image" src="" alt="Travel Note">
-            <button class="note-modal-close" onclick="closeNoteModal()">×</button>
-        </div>
-    </div>
 
     <script src="app.js"></script>
 </body>

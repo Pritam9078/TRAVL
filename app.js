@@ -201,79 +201,39 @@ const placesData = {
             title: "Wandering Through Shillong",
             subtitle: "Meghalaya Through My Eyes",
             images: {
-                airport: "https://i.postimg.cc/vmMrwqnj/Whats-App-Image-2025-12-15-at-20-01-29.jpg",
-                umiamLake: "https://i.postimg.cc/5tnCdxbf/Whats-App-Image-2025-12-15-at-20-01-47.jpg",
-                donBosco: "https://i.postimg.cc/nV6Tw1d8/Whats-App-Image-2025-12-15-at-20-02-34.jpg",
-                policeBazaar: "https://i.postimg.cc/0jgmZV9C/Whats-App-Image-2025-12-15-at-20-03-19.jpg",
-                elephantFalls: "https://i.postimg.cc/90jRyzBn/Whats-App-Image-2025-12-15-at-20-03-32.jpg",
-                personal: "https://i.postimg.cc/zXz3Ns2R/Whats-App-Image-2025-12-15-at-20-03-43.jpg",
-                caves: "https://i.postimg.cc/wM6x6N2L/Whats-App-Image-2025-12-15-at-20-05-39.jpg",
-                nohkalikai: "https://i.postimg.cc/zX2DrVgf/Whats-App-Image-2025-12-15-at-20-06-11.jpg",
-                doubleDecker: "https://i.postimg.cc/tCJy2pmD/Whats-App-Image-2025-12-15-at-20-06-26.jpg",
-                blueLagoon: "https://i.postimg.cc/fyL42f57/Whats-App-Image-2025-12-15-at-20-06-36.jpg",
-                dawki: "https://i.postimg.cc/WbxR8rZr/Whats-App-Image-2025-12-15-at-20-07-23.jpg"
+                journey1: "https://i.postimg.cc/cJ3pvYQv/Whats-App-Image-2025-12-18-at-14-17-27.jpg",
+                journey2: "https://i.postimg.cc/RVqb3KBd/Whats-App-Image-2025-12-18-at-14-17-28-(1).jpg",
+                journey3: "https://i.postimg.cc/T1Bj5yVH/Whats-App-Image-2025-12-18-at-14-17-28-(2).jpg",
+                journey4: "https://i.postimg.cc/FRR0PbD9/Whats-App-Image-2025-12-18-at-14-17-28.jpg",
+                journey5: "https://i.postimg.cc/GmxMVQJJ/Whats-App-Image-2025-12-18-at-14-17-29-(1).jpg",
+                journey6: "https://i.postimg.cc/wBtwMpYc/Whats-App-Image-2025-12-18-at-14-17-29-(2).jpg",
+                journey7: "https://i.postimg.cc/SNyV88pJ/Whats-App-Image-2025-12-18-at-14-17-29.jpg",
+                journey8: "https://i.postimg.cc/02YjgM6v/Whats-App-Image-2025-12-18-at-14-17-30-(1).jpg",
+                journey9: "https://i.postimg.cc/05m2mM0Y/Whats-App-Image-2025-12-18-at-14-17-30-(2).jpg",
+                journey10: "https://i.postimg.cc/rwpkhK5M/Whats-App-Image-2025-12-18-at-14-17-30-(3).jpg",
+                journey11: "https://i.postimg.cc/YqdcmMZZ/Whats-App-Image-2025-12-18-at-14-17-30.jpg"
             },
-            content: `I began this journey with a flight from Bangalore to Guwahati, carrying equal parts excitement and curiosity. As the plane landed, I knew I was stepping into a completely different world. From Guwahati, we had already booked a car, and as we started driving toward Shillong, the roads slowly curled into the hills. The air felt cooler, fresher, and with every turn, Meghalaya began to reveal itself.
+            content: `[IMG:journey1]
 
-[IMG:airport]
+[IMG:journey2]
 
-**Umiam Lake – Where the Journey Truly Began**
+[IMG:journey3]
 
-Our first stop was Umiam Lake, and honestly, it felt like the journey truly began there. The lake was unbelievably beautiful—wide, calm, and surrounded by gentle green hills. I remember standing there quietly, watching the clouds reflect on the water, feeling an unexpected sense of peace. It was one of those places where you don't feel the need to talk—you just stand and absorb everything.
+[IMG:journey4]
 
-[IMG:umiamLake]
+[IMG:journey5]
 
-**Shillong – A City That Feels Alive**
+[IMG:journey6]
 
-We reached Shillong and went straight to the Don Bosco Museum. Walking through the museum felt like slowly understanding the soul of the Northeast. Each floor told stories of tribes, traditions, and cultures I knew very little about before. It made me appreciate the region beyond its landscapes.
+[IMG:journey7]
 
-[IMG:donBosco]
+[IMG:journey8]
 
-After that, we checked into our hotel to rest for a bit before heading out again. In the evening, we went to Police Bazaar, which felt like the heartbeat of Shillong. The place was lively, colorful, and full of energy. We walked through the streets, bought small tourist souvenirs, and just enjoyed being there among locals and travelers. It felt warm, familiar, and welcoming.
+[IMG:journey9]
 
-[IMG:policeBazaar]
+[IMG:journey10]
 
-**Elephant Falls – Nature in Its Raw Form**
-
-Next on our list was Elephant Falls. The moment we got closer, we could hear the water before we saw it. Watching the waterfall rush down with such force was refreshing and calming at the same time. The mist in the air and the greenery around made the whole experience feel raw and natural.
-
-[IMG:elephantFalls]
-
-[IMG:personal]
-
-**Mawsmai Cave – A Step into the Unknown**
-
-Visiting Mawsmai Cave was a completely different experience. Walking inside the dark, narrow cave was both exciting and slightly uncomfortable. Water dripped from above, and the silence felt heavy. But that's what made it special—it reminded me how powerful and ancient nature really is.
-
-[IMG:caves]
-
-**Nohkalikai Falls – Powerful and Emotional**
-
-Nohkalikai Falls left me speechless. Standing at the edge and looking down at the water falling from such a height was overwhelming. The view was dramatic, almost emotional. There was something about the place that made me stand still for a long time, just looking, thinking, and feeling.
-
-[IMG:nohkalikai]
-
-**Krang Suri (Kyrem) Falls – A Place I'll Never Forget**
-
-Among all the places I visited, Krang Suri Falls felt truly magical. The water was unbelievably clear and blue, and the surroundings were so peaceful. I remember wishing I could stay there longer. It felt untouched, pure, and quietly beautiful—one of those places that stays with you even after you leave.
-
-**Double Decker Living Root Bridge & Blue Lagoon – Beautiful but Brutal**
-
-The trek to the Double Decker Living Root Bridge and Blue Lagoon was the most challenging part of the trip. The bridge itself was incredible—nature and human patience working together over generations. The Blue Lagoon was stunning and refreshing, making the effort feel worth it.
-
-[IMG:doubleDecker]
-
-But the climb back was exhausting. The endless steps pushed me to my limits, and even physically fit people struggled. I realized this trek isn't for everyone—especially those with heart problems, BP issues, or joint pain. For me, it was both a rewarding and difficult experience. Beautiful, but brutal.
-
-[IMG:blueLagoon]
-
-**Dawki – A Perfect Ending**
-
-Finally, we reached Dawki, and it felt like the perfect way to end the journey. The water was so clear it didn't feel real. Boats looked like they were floating in the air. Standing there, I felt calm, amazed, and grateful. It was one of those moments where you don't want to leave, just stand and remember how incredible the world can be.
-
-[IMG:dawki]
-
-This journey through Meghalaya wasn't just about visiting places—it was about feeling them. The roads, the silence, the effort, the beauty, and the exhaustion all came together to create memories I know I'll carry with me for a long time.`
+[IMG:journey11]`
         }
     },
     goa: {
@@ -421,28 +381,8 @@ function showStatePage(stateId) {
     // Handle journey section (only for Shillong)
     const journeySection = document.getElementById('journey-section');
     if (stateId === 'shillong' && stateData.journey) {
-        console.log("Loading Shillong journey section");
         journeySection.style.display = 'block';
         document.getElementById('journey-title').textContent = stateData.journey.title;
-        console.log("Journey section should now be visible with Notes button");
-        
-        // Add event listener to notes button
-        addNotesButtonListener();
-        
-        // Preload images for better performance
-        setTimeout(() => {
-            const notesGallery = document.getElementById('notes-gallery');
-            if (notesGallery) {
-                const images = notesGallery.querySelectorAll('img');
-                console.log("Preloading", images.length, "note images");
-                images.forEach((img, index) => {
-                    const newImg = new Image();
-                    newImg.onload = () => console.log(`Preloaded image ${index + 1}`);
-                    newImg.onerror = () => console.error(`Failed to preload image ${index + 1}:`, img.src);
-                    newImg.src = img.src;
-                });
-            }
-        }, 500);
         
         // Integrate subtitle into the content rather than separate
         const journeyText = document.getElementById('journey-text');
@@ -652,138 +592,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(addImageLoadingEffect, 100);
 });
 
-// Notes functionality
-function toggleNotes() {
-    console.log("toggleNotes function called");
-    const notesGallery = document.getElementById('notes-gallery');
-    const notesBtn = document.getElementById('notes-btn');
-    
-    console.log("Notes gallery element:", notesGallery);
-    console.log("Notes button element:", notesBtn);
-    
-    if (notesGallery && notesBtn) {
-        const currentDisplay = window.getComputedStyle(notesGallery).display;
-        console.log("Current computed display:", currentDisplay);
-        
-        if (currentDisplay === 'none') {
-            // Show the gallery
-            notesGallery.style.display = 'block';
-            notesGallery.style.visibility = 'visible';
-            notesGallery.style.opacity = '1';
-            notesBtn.innerHTML = '📝 HIDE NOTES';
-            notesBtn.style.background = 'linear-gradient(135deg, #e53e3e 0%, #c53030 100%)';
-            console.log("Notes gallery shown - checking images...");
-            
-            // Check if images are loading
-            setTimeout(() => {
-                const images = notesGallery.querySelectorAll('img');
-                console.log("Found", images.length, "images in gallery");
-                images.forEach((img, index) => {
-                    console.log(`Image ${index + 1}:`, img.src, "loaded:", img.complete);
-                    if (!img.complete) {
-                        img.addEventListener('load', () => {
-                            console.log(`Image ${index + 1} loaded successfully`);
-                        });
-                        img.addEventListener('error', () => {
-                            console.error(`Image ${index + 1} failed to load:`, img.src);
-                        });
-                    }
-                });
-            }, 100);
-            
-        } else {
-            // Hide the gallery
-            notesGallery.style.display = 'none';
-            notesBtn.innerHTML = '📝 NOTES';
-            notesBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-            console.log("Notes gallery hidden");
-        }
-    } else {
-        console.error("Could not find notes gallery or button elements");
-        console.error("Gallery exists:", !!notesGallery);
-        console.error("Button exists:", !!notesBtn);
-        
-        // Try to find elements in DOM
-        console.log("All elements with 'notes' in id:", document.querySelectorAll('[id*="notes"]'));
-    }
-}
-
-function openNoteModal(imageUrl) {
-    console.log("openNoteModal called with URL:", imageUrl);
-    const modal = document.getElementById('note-modal');
-    const modalImage = document.getElementById('note-modal-image');
-    
-    console.log("Modal element:", modal);
-    console.log("Modal image element:", modalImage);
-    
-    if (modal && modalImage) {
-        modalImage.src = imageUrl;
-        modal.classList.add('active');
-        console.log("Modal opened successfully");
-        
-        // Prevent body scroll when modal is open
-        document.body.style.overflow = 'hidden';
-    } else {
-        console.error("Could not find modal elements");
-    }
-}
-
-function closeNoteModal() {
-    const modal = document.getElementById('note-modal');
-    modal.classList.remove('active');
-    
-    // Restore body scroll
-    document.body.style.overflow = 'auto';
-}
-
-// Close modal when clicking outside the image
-document.addEventListener('click', function(e) {
-    const modal = document.getElementById('note-modal');
-    if (e.target === modal) {
-        closeNoteModal();
-    }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeNoteModal();
-    }
-});
-
-// Add backup event listener for notes button
-document.addEventListener('DOMContentLoaded', function() {
-    // Add event listener when the page loads
-    setTimeout(function() {
-        const notesBtn = document.getElementById('notes-btn');
-        if (notesBtn) {
-            console.log("Adding backup event listener to notes button");
-            notesBtn.addEventListener('click', toggleNotes);
-        }
-    }, 1000);
-});
-
-// Also add event listener when Shillong is loaded
-function addNotesButtonListener() {
-    setTimeout(function() {
-        const notesBtn = document.getElementById('notes-btn');
-        if (notesBtn && !notesBtn.hasAttribute('data-listener-added')) {
-            console.log("Adding event listener to notes button");
-            notesBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                toggleNotes();
-            });
-            notesBtn.setAttribute('data-listener-added', 'true');
-        }
-    }, 500);
-}
-
 // Export functions for global access (if needed)
 window.showLanding = showLanding;
 window.showStatePage = showStatePage;
 window.showPlaceDetail = showPlaceDetail;
 window.goBackToState = goBackToState;
-window.toggleNotes = toggleNotes;
-window.openNoteModal = openNoteModal;
-window.closeNoteModal = closeNoteModal;
