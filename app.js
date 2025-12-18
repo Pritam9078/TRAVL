@@ -202,9 +202,9 @@ const placesData = {
             subtitle: "Meghalaya Through My Eyes",
             images: {
                 journey1: "https://i.postimg.cc/cJ3pvYQv/Whats-App-Image-2025-12-18-at-14-17-27.jpg",
-                journey2: "https://i.postimg.cc/RVqb3KBd/Whats-App-Image-2025-12-18-at-14-17-28-(1).jpg",
-                journey3: "https://i.postimg.cc/T1Bj5yVH/Whats-App-Image-2025-12-18-at-14-17-28-(2).jpg",
-                journey4: "https://i.postimg.cc/FRR0PbD9/Whats-App-Image-2025-12-18-at-14-17-28.jpg",
+                journey2: "https://i.postimg.cc/FRR0PbD9/Whats-App-Image-2025-12-18-at-14-17-28.jpg",
+                journey3: "https://i.postimg.cc/RVqb3KBd/Whats-App-Image-2025-12-18-at-14-17-28-(1).jpg",
+                journey4: "https://i.postimg.cc/T1Bj5yVH/Whats-App-Image-2025-12-18-at-14-17-28-(2).jpg",
                 journey5: "https://i.postimg.cc/GmxMVQJJ/Whats-App-Image-2025-12-18-at-14-17-29-(1).jpg",
                 journey6: "https://i.postimg.cc/wBtwMpYc/Whats-App-Image-2025-12-18-at-14-17-29-(2).jpg",
                 journey7: "https://i.postimg.cc/SNyV88pJ/Whats-App-Image-2025-12-18-at-14-17-29.jpg",
@@ -213,27 +213,83 @@ const placesData = {
                 journey10: "https://i.postimg.cc/rwpkhK5M/Whats-App-Image-2025-12-18-at-14-17-30-(3).jpg",
                 journey11: "https://i.postimg.cc/YqdcmMZZ/Whats-App-Image-2025-12-18-at-14-17-30.jpg"
             },
-            content: `[IMG:journey1]
+            content: `**01. The Journey Begins, Bangalore to Shillong**
+
+This journey began with a flight from Bangalore to Guwahati, filled with excitement, curiosity, and a quiet sense of anticipation. As the plane landed, the surroundings already felt different, greener, calmer, and slower. From Guwahati, we had a pre-booked car waiting for us. As we started driving toward Shillong, the transformation truly began.
+
+The flat roads slowly turned into winding hill paths. The air grew cooler, the sky felt closer, and mist hugged the hills like a soft blanket. We stopped once along the way for a small tea break: hot chai, light snacks, and cold mountain air that instantly refreshed us. That drive itself felt like a gentle introduction to Meghalaya, preparing us for everything that lay ahead.
+
+[IMG:journey1]
+
+**02. Umiam Lake – Where Time Slows Down**
+
+Our first stop was Umiam Lake. It felt like the perfect beginning. The lake stretched endlessly, calm and smooth, reflecting clouds that floated on the water. The weather was crisp and cool, and a gentle breeze moved through the hills.
+
+Standing there, sipping tea and quietly taking in the view, I felt an unexpected peace. It wasn't just beautiful; it was soothing. Umiam Lake made me slow down, breathe deeper, and truly arrive in Meghalaya.
 
 [IMG:journey2]
 
+**03. Elephant Falls – Nature's Power Up Close**
+
+Next, we visited Elephant Falls. Even before we got there, we could hear the sound of rushing water getting louder with every step. The waterfall flowed down in strong streams, surrounded by lush greenery and slippery stone paths. The mist brushed against our faces, the air smelled fresh, and everything felt alive. It was refreshing yet calming. Nature showed its raw strength without being overwhelming.
+
 [IMG:journey3]
+
+**04. Garden of Caves – Meghalaya's Hidden Wonder**
+
+The Garden of Caves felt like stepping into a secret world. The paths were muddy, the rocks uneven, and small waterfalls appeared unexpectedly among the greenery. It felt untouched and wild. Walking carefully through the area, surrounded by moss-covered rocks and dripping water, I felt like Meghalaya was revealing a quieter, lesser-known side of itself. It's a side not many people talk about, but one that stays in your mind.
 
 [IMG:journey4]
 
+**05. Mawsmai Cave & Arwah Cave – Into the Earth**
+
+Visiting Mawsmai Cave was exciting and a bit uncomfortable. The narrow passages, low ceilings, and darkness made every step feel adventurous. Water dripped from above, and the heavy silence was both eerie and captivating. Arwah Cave felt calmer and more mysterious. The natural formations and fossils inside showed how ancient and powerful nature can be. These caves weren't just tourist spots; they reminded me of time itself.
+
 [IMG:journey5]
+
+**06. Double Decker Living Root Bridge – Nature and Patience**
+
+The trek to the Double Decker Living Root Bridge was the toughest part of the journey. Endless stone steps, humidity, and fatigue pushed our physical and mental strength to the limit. We took short breaks along the way, drinking water, catching our breath, and encouraging each other to keep moving. When we finally reached the bridge, all the tiredness seemed worth it. The bridge stood as a symbol of patience; roots shaped over generations held strong without cement or machines. It was humbling and inspiring.
 
 [IMG:journey6]
 
+**07. The Matriarchs of Meghalaya, A Culture That Amazed Me**
+
+One of the most interesting parts of this journey was learning about Meghalaya's matriarchal society. In this society, family names, property, and lineage pass through women. After marriage, boys move into the girl's home, which is a concept so different from what we are used to. I was genuinely surprised and excited to learn about this tradition. It showed respect, balance, and strength in women, making Meghalaya not just beautiful in landscape, but also powerful in values.
+
 [IMG:journey7]
+
+**08. Blue Lagoon, Reward After Effort**
+
+The Blue Lagoon felt like a reward after the tiring trek. The water was clear, calm, and inviting. Surrounded by thick greenery, it felt peaceful and refreshing. Sitting near the water, tired but happy, I felt proud of myself for finishing the journey. The silence, broken only by the sounds of water, made the moment unforgettable.
 
 [IMG:journey8]
 
+**09. Nohkalikai Falls – A View That Hits the Heart**
+
+Nohkalikai Falls was truly breathtaking. Standing at the edge and looking down at the powerful waterfall dropping from such a height was overwhelming. The weather was cool, the sky was slightly cloudy, and the view was dramatic.
+
+There was something emotional about this place; it made me stop, think, and simply feel. It wasn't just a view; it was an experience.
+
 [IMG:journey9]
+
+**10. Dawki – The Perfect Ending**
+
+Our final destination was Dawki, and it couldn't have been better. The river water was so clear that boats looked like they were floating in the air. The calm surroundings and gentle breeze made everything feel unreal.
+
+Standing there, I felt grateful for the journey, the effort, the beauty, and the memories. Dawki felt peaceful, magical, and complete.
 
 [IMG:journey10]
 
-[IMG:journey11]`
+**11. The Way to Blue Lagoon – Every Step Matters**
+
+The path to the Blue Lagoon deserves attention. Narrow trails, hanging bridges, steep steps, and views of the forest made the journey both challenging and beautiful. Each step reminded me that Meghalaya shouldn't be rushed. This journey showed me that sometimes the path is just as memorable as the destination.
+
+[IMG:journey11]
+
+**Conclusion**
+
+This trip through Meghalaya wasn't just about visiting places; it was about experiencing them. The cold weather, warm tea breaks, long drives, tiring hikes, quiet moments, and stunning views came together to create memories I'll hold onto forever. Meghalaya didn't just reveal its beauty to me; it let me truly experience it.`
         }
     },
     goa: {
