@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes Test</title>
+    <style>
+        .notes-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .notes-gallery {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ccc;
+        }
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .note-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .note-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .note-modal.active {
+            display: flex;
+        }
+        .note-modal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <button class="notes-btn" onclick="toggleNotes()">📝 NOTES</button>
+    
+    <div class="notes-gallery" id="notes-gallery" style="display: none;">
+        <h4>📖 My Travel Notes</h4>
+        <div class="notes-grid">
+            <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/cJ3pvYQv/Whats-App-Image-2025-12-18-at-14-17-27.jpg')">
+                <img src="https://i.postimg.cc/cJ3pvYQv/Whats-App-Image-2025-12-18-at-14-17-27.jpg" alt="Note 1">
+            </div>
+            <div class="note-card" onclick="openNoteModal('https://i.postimg.cc/RVqb3KBd/Whats-App-Image-2025-12-18-at-14-17-28-(1).jpg')">
+                <img src="https://i.postimg.cc/RVqb3KBd/Whats-App-Image-2025-12-18-at-14-17-28-(1).jpg" alt="Note 2">
+            </div>
+        </div>
+    </div>
+    
+    <div class="note-modal" id="note-modal" onclick="closeNoteModal()">
+        <img id="note-modal-image" src="" alt="">
+    </div>
+    
+    <script>
+        function toggleNotes() {
+            console.log("toggleNotes called");
+            const notesGallery = document.getElementById('notes-gallery');
+            const notesBtn = document.querySelector('.notes-btn');
+            
+            if (notesGallery.style.display === 'none' || notesGallery.style.display === '') {
+                notesGallery.style.display = 'block';
+                notesBtn.textContent = '📝 HIDE NOTES';
+                console.log("Notes shown");
+            } else {
+                notesGallery.style.display = 'none';
+                notesBtn.textContent = '📝 NOTES';
+                console.log("Notes hidden");
+            }
+        }
+        
+        function openNoteModal(imageUrl) {
+            console.log("openNoteModal called with:", imageUrl);
+            const modal = document.getElementById('note-modal');
+            const modalImage = document.getElementById('note-modal-image');
+            
+            modalImage.src = imageUrl;
+            modal.classList.add('active');
+        }
+        
+        function closeNoteModal() {
+            console.log("closeNoteModal called");
+            const modal = document.getElementById('note-modal');
+            modal.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

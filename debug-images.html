@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes Debug Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-btn { 
+            background: #667eea; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .test-gallery { 
+            display: none; 
+            padding: 20px; 
+            border: 2px solid #ccc; 
+            border-radius: 10px;
+        }
+        .test-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 15px; 
+        }
+        .test-card { 
+            border: 1px solid #ddd; 
+            padding: 10px; 
+            border-radius: 8px; 
+        }
+        .test-card img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notes Debug Test</h1>
+    <button class="test-btn" onclick="toggleTestGallery()">Show/Hide Gallery</button>
+    
+    <div class="test-gallery" id="test-gallery">
+        <h3>Test Images</h3>
+        <div class="test-grid">
+            <div class="test-card">
+                <img src="https://i.postimg.cc/cJ3pvYQv/Whats-App-Image-2025-12-18-at-14-17-27.jpg" alt="Test 1" onerror="console.error('Image 1 failed to load')">
+                <p>Image 1</p>
+            </div>
+            <div class="test-card">
+                <img src="https://i.postimg.cc/RVqb3KBd/Whats-App-Image-2025-12-18-at-14-17-28-(1).jpg" alt="Test 2" onerror="console.error('Image 2 failed to load')">
+                <p>Image 2</p>
+            </div>
+            <div class="test-card">
+                <img src="https://i.postimg.cc/T1Bj5yVH/Whats-App-Image-2025-12-18-at-14-17-28-(2).jpg" alt="Test 3" onerror="console.error('Image 3 failed to load')">
+                <p>Image 3</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleTestGallery() {
+            const gallery = document.getElementById('test-gallery');
+            if (gallery.style.display === 'none' || gallery.style.display === '') {
+                gallery.style.display = 'block';
+                console.log('Gallery shown');
+            } else {
+                gallery.style.display = 'none';
+                console.log('Gallery hidden');
+            }
+        }
+    </script>
+</body>
+</html>

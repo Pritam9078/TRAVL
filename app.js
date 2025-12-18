@@ -421,8 +421,28 @@ function showStatePage(stateId) {
     // Handle journey section (only for Shillong)
     const journeySection = document.getElementById('journey-section');
     if (stateId === 'shillong' && stateData.journey) {
+        console.log("Loading Shillong journey section");
         journeySection.style.display = 'block';
         document.getElementById('journey-title').textContent = stateData.journey.title;
+        console.log("Journey section should now be visible with Notes button");
+        
+        // Add event listener to notes button
+        addNotesButtonListener();
+        
+        // Preload images for better performance
+        setTimeout(() => {
+            const notesGallery = document.getElementById('notes-gallery');
+            if (notesGallery) {
+                const images = notesGallery.querySelectorAll('img');
+                console.log("Preloading", images.length, "note images");
+                images.forEach((img, index) => {
+                    const newImg = new Image();
+                    newImg.onload = () => console.log(`Preloaded image ${index + 1}`);
+                    newImg.onerror = () => console.error(`Failed to preload image ${index + 1}:`, img.src);
+                    newImg.src = img.src;
+                });
+            }
+        }, 500);
         
         // Integrate subtitle into the content rather than separate
         const journeyText = document.getElementById('journey-text');
@@ -632,8 +652,138 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(addImageLoadingEffect, 100);
 });
 
+// Notes functionality
+function toggleNotes() {
+    console.log("toggleNotes function called");
+    const notesGallery = document.getElementById('notes-gallery');
+    const notesBtn = document.getElementById('notes-btn');
+    
+    console.log("Notes gallery element:", notesGallery);
+    console.log("Notes button element:", notesBtn);
+    
+    if (notesGallery && notesBtn) {
+        const currentDisplay = window.getComputedStyle(notesGallery).display;
+        console.log("Current computed display:", currentDisplay);
+        
+        if (currentDisplay === 'none') {
+            // Show the gallery
+            notesGallery.style.display = 'block';
+            notesGallery.style.visibility = 'visible';
+            notesGallery.style.opacity = '1';
+            notesBtn.innerHTML = '📝 HIDE NOTES';
+            notesBtn.style.background = 'linear-gradient(135deg, #e53e3e 0%, #c53030 100%)';
+            console.log("Notes gallery shown - checking images...");
+            
+            // Check if images are loading
+            setTimeout(() => {
+                const images = notesGallery.querySelectorAll('img');
+                console.log("Found", images.length, "images in gallery");
+                images.forEach((img, index) => {
+                    console.log(`Image ${index + 1}:`, img.src, "loaded:", img.complete);
+                    if (!img.complete) {
+                        img.addEventListener('load', () => {
+                            console.log(`Image ${index + 1} loaded successfully`);
+                        });
+                        img.addEventListener('error', () => {
+                            console.error(`Image ${index + 1} failed to load:`, img.src);
+                        });
+                    }
+                });
+            }, 100);
+            
+        } else {
+            // Hide the gallery
+            notesGallery.style.display = 'none';
+            notesBtn.innerHTML = '📝 NOTES';
+            notesBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            console.log("Notes gallery hidden");
+        }
+    } else {
+        console.error("Could not find notes gallery or button elements");
+        console.error("Gallery exists:", !!notesGallery);
+        console.error("Button exists:", !!notesBtn);
+        
+        // Try to find elements in DOM
+        console.log("All elements with 'notes' in id:", document.querySelectorAll('[id*="notes"]'));
+    }
+}
+
+function openNoteModal(imageUrl) {
+    console.log("openNoteModal called with URL:", imageUrl);
+    const modal = document.getElementById('note-modal');
+    const modalImage = document.getElementById('note-modal-image');
+    
+    console.log("Modal element:", modal);
+    console.log("Modal image element:", modalImage);
+    
+    if (modal && modalImage) {
+        modalImage.src = imageUrl;
+        modal.classList.add('active');
+        console.log("Modal opened successfully");
+        
+        // Prevent body scroll when modal is open
+        document.body.style.overflow = 'hidden';
+    } else {
+        console.error("Could not find modal elements");
+    }
+}
+
+function closeNoteModal() {
+    const modal = document.getElementById('note-modal');
+    modal.classList.remove('active');
+    
+    // Restore body scroll
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside the image
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('note-modal');
+    if (e.target === modal) {
+        closeNoteModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeNoteModal();
+    }
+});
+
+// Add backup event listener for notes button
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener when the page loads
+    setTimeout(function() {
+        const notesBtn = document.getElementById('notes-btn');
+        if (notesBtn) {
+            console.log("Adding backup event listener to notes button");
+            notesBtn.addEventListener('click', toggleNotes);
+        }
+    }, 1000);
+});
+
+// Also add event listener when Shillong is loaded
+function addNotesButtonListener() {
+    setTimeout(function() {
+        const notesBtn = document.getElementById('notes-btn');
+        if (notesBtn && !notesBtn.hasAttribute('data-listener-added')) {
+            console.log("Adding event listener to notes button");
+            notesBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleNotes();
+            });
+            notesBtn.setAttribute('data-listener-added', 'true');
+        }
+    }, 500);
+}
+
 // Export functions for global access (if needed)
 window.showLanding = showLanding;
 window.showStatePage = showStatePage;
 window.showPlaceDetail = showPlaceDetail;
 window.goBackToState = goBackToState;
+window.toggleNotes = toggleNotes;
+window.openNoteModal = openNoteModal;
+window.closeNoteModal = closeNoteModal;
